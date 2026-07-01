@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>MTB Kenya NTSA Driving Theory Quiz — Free Practice Test 2025</title>
+<meta name="description" content="Kenya's #1 free NTSA driving theory practice app: 45 real exam questions, a live Town Board driving simulator, road signs trainer, scenario simulator and a 20-question mock exam. Pass first time!">
+<meta name="keywords" content="NTSA driving test Kenya, Kenya driving theory quiz, MTB driving test, NTSA exam 2025, boda boda rules Kenya, Kenya road signs, driving licence Kenya, NTSA practice questions, highway code Kenya, driving theory Kenya free">
+<meta name="author" content="MTB Kenya">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+<meta name="revisit-after" content="7 days">
+<meta name="category" content="Education, Kenya Transport, Driving">
+<link rel="canonical" href="https://mtbkenya.blogspot.com/">
+
+<!-- Open Graph (Facebook / WhatsApp sharing) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="MTB Kenya — Free NTSA Driving Theory Quiz 2025">
+<meta property="og:description" content="Test your Kenya road knowledge! 45 NTSA exam questions with explanations. Beginner, Intermediate & Expert levels. Pass first time!">
+<meta property="og:image" content="https://via.placeholder.com/1200x630/0D0D0D/F5C518?text=MTB+Kenya+NTSA+Quiz">
+<meta property="og:url" content="https://mtbkenya.blogspot.com/">
+<meta property="og:site_name" content="MTB Kenya">
+<meta property="og:locale" content="en_KE">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MTB Kenya — Free NTSA Driving Theory Quiz 2025">
+<meta name="twitter:description" content="Kenya's #1 Free NTSA driving theory practice quiz. 45 questions, 3 difficulty levels. Pass your test first time! 🚗🏍️">
+<meta name="twitter:image" content="https://via.placeholder.com/1200x630/0D0D0D/F5C518?text=MTB+Kenya+NTSA+Quiz">
+<meta name="twitter:site" content="@MTBKenya">
+
+<!-- Schema.org Structured Data (Google Rich Results) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Quiz",
+  "name": "MTB Kenya NTSA Driving Theory Quiz",
+  "description": "Free Kenya NTSA driving theory practice quiz with 45 questions covering road signs, traffic rules, boda boda regulations, and highway code.",
+  "educationalLevel": "Beginner to Expert",
+  "inLanguage": "en-KE",
+  "isAccessibleForFree": true,
+  "url": "https://mtbkenya.blogspot.com/",
+  "provider": {
+    "@type": "Organization",
+    "name": "MTB Kenya",
+    "url": "https://mtbkenya.blogspot.com/"
+  },
+  "about": [
+    {"@type": "Thing", "name": "NTSA Kenya Driving Theory Test"},
+    {"@type": "Thing", "name": "Kenya Highway Code"},
+    {"@type": "Thing", "name": "Kenya Road Signs"},
+    {"@type": "Thing", "name": "Boda Boda Traffic Laws Kenya"}
+  ]
+}
+</script>
+<style>
+:root{
+  --tarmac:#1A1A1A; --yellow:#FFC72C; --red:#C8102E; --cream:#F4F1EA;
+  --tarmac2:#242424; --green:#2E7D32; --road:#3a3a3a; --grass:#234d2e;
+}
+*{box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; user-select:none;}
+body{background:var(--tarmac); color:var(--cream); font-family:'Segoe UI',Arial,sans-serif; overflow-x:hidden;}
+.display{font-family:Impact,'Arial Black',sans-serif;}
+header{background:var(--yellow); color:var(--tarmac); padding:10px 14px; text-align:center; border-bottom:5px solid var(--red);}
+header h1{font-family:Impact,'Arial Black',sans-serif; font-size:1.4rem; letter-spacing:.5px;}
+header p{font-size:.7rem; font-weight:bold;}
+nav{display:flex; gap:6px; padding:8px; background:var(--tarmac2); overflow-x:auto;}
+nav button{flex:1; min-width:90px; background:var(--tarmac); color:var(--cream); border:2px solid var(--yellow); padding:8px 4px; font-weight:bold; border-radius:8px; cursor:pointer; font-size:.75rem; white-space:nowrap;}
+nav button.active{background:var(--yellow); color:var(--tarmac);}
+main{max-width:980px; margin:0 auto; padding:10px;}
+.hidden{display:none;}
+.card{background:var(--tarmac2); border:2px solid #3a3a3a; border-radius:12px; padding:14px; margin-bottom:12px;}
+h2.section-title{font-family:Impact,'Arial Black',sans-serif; color:var(--yellow); margin-bottom:8px; font-size:1.1rem;}
+
+/* ===== SIMULATOR ===== */
+#simWrap{position:relative;}
+#boardCanvas{width:100%; height:auto; display:block; background:var(--grass); border-radius:10px; border:3px solid var(--yellow); touch-action:none;}
+.tutor-bar{display:flex; gap:10px; align-items:flex-start; background:#000; border-radius:10px; padding:10px; margin-top:10px;}
+.tutor-avatar{width:46px; height:46px; border-radius:50%; background:var(--yellow); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:1.4rem;}
+.tutor-text{font-size:.82rem; line-height:1.4;}
+.tutor-text b{color:var(--yellow);}
+.mission-progress{display:flex; gap:5px; margin-top:8px; flex-wrap:wrap;}
+.mission-dot{width:22px; height:22px; border-radius:50%; background:#444; font-size:.65rem; display:flex; align-items:center; justify-content:center; font-weight:bold;}
+.mission-dot.done{background:var(--green);}
+.mission-dot.active{background:var(--yellow); color:#1A1A1A;}
+.controls{display:grid; grid-template-columns:repeat(3,64px); grid-template-rows:repeat(2,52px); gap:6px; justify-content:center; margin-top:12px;}
+.ctrl-btn{background:var(--tarmac2); border:2px solid var(--yellow); color:var(--cream); border-radius:10px; font-size:1.3rem; display:flex; align-items:center; justify-content:center;}
+.ctrl-btn:active{background:var(--yellow); color:var(--tarmac);}
+#btnUp{grid-column:2; grid-row:1;}
+#btnLeft{grid-column:1; grid-row:2;}
+#btnDown{grid-column:2; grid-row:2;}
+#btnRight{grid-column:3; grid-row:2;}
+.simtopbar{display:flex; justify-content:space-between; font-size:.75rem; padding:4px 2px 8px;}
+.simtopbar b{color:var(--yellow);}
+.btnrow{display:flex; gap:8px; justify-content:center; margin-top:10px; flex-wrap:wrap;}
+button.action{background:var(--yellow); color:var(--tarmac); border:none; padding:9px 16px; border-radius:8px; font-weight:bold; cursor:pointer; font-size:.82rem;}
+button.action.alt{background:transparent; color:var(--yellow); border:2px solid var(--yellow);}
+.hint{font-size:.7rem; opacity:.6; text-align:center; margin-top:4px;}
+
+/* ===== shared minor styles for theory/signs/exam ===== */
+.sign-card{text-align:center;}
+.sign-card svg{width:110px; height:110px;}
+.sign-name{font-weight:bold; color:var(--yellow); margin-top:6px;}
+.sign-cat{font-size:.7rem; opacity:.7;}
+.sign-meaning{font-size:.82rem; margin-top:8px; line-height:1.4;}
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(100px,1fr)); gap:8px; margin-top:10px;}
+.grid .mini{background:var(--tarmac); border:2px solid var(--yellow); border-radius:8px; padding:6px; text-align:center; cursor:pointer; font-size:.65rem;}
+.grid .mini svg{width:40px; height:40px;}
+.option-btn{display:block; width:100%; text-align:left; background:var(--tarmac); color:var(--cream); border:2px solid #444; padding:10px; border-radius:8px; margin-bottom:6px; cursor:pointer; font-size:.82rem;}
+.option-btn.correct{border-color:var(--green); background:#1b3a1d;}
+.option-btn.wrong{border-color:var(--red); background:#3a1b1f;}
+.feedback{margin-top:10px; padding:10px; border-radius:8px; font-size:.8rem; line-height:1.4;}
+.feedback.ok{background:#1b3a1d; border-left:4px solid var(--green);}
+.feedback.no{background:#3a1b1f; border-left:4px solid var(--red);}
+.progress-bar{height:8px; background:#000; border-radius:6px; overflow:hidden; margin:6px 0;}
+.progress-bar i{display:block; height:100%; background:var(--yellow);}
+.exam-summary table{width:100%; border-collapse:collapse; font-size:.78rem; margin-top:8px;}
+.exam-summary td,.exam-summary th{border-bottom:1px solid #444; padding:5px 3px; text-align:left;}
+footer{text-align:center; padding:12px; font-size:.65rem; opacity:.5;}
+</style>
+<style>
+/* ===== EMBEDDED QUIZ MODULE STYLES ===== */
+
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;800&family=Bebas+Neue&family=JetBrains+Mono:wght@400;700&display=swap');
+
+  :root {
+    --black:   #0D0D0D;
+    --amber:   #F5C518;
+    --green:   #22C55E;
+    --red:     #EF4444;
+    --navy:    #1A1A2E;
+    --white:   #F0F0F0;
+    --muted:   #8E8E9F;
+    --font-ui:   'Barlow Condensed', sans-serif;
+    --font-head: 'Bebas Neue', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* PAGE WRAPPER — works inside Blogger body */
+  .mtb-page-wrapper {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-ui);
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 16px 8px 40px;
+  }
+
+  /* SEO ARTICLE HEADER — visible to Google crawlers */
+  .seo-header {
+    max-width: 680px;
+    margin: 0 auto 24px;
+    text-align: center;
+    padding: 0 12px;
+  }
+  .seo-header h1 {
+    font-family: var(--font-head);
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    color: var(--amber);
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .seo-header .subtitle {
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    color: var(--muted);
+    max-width: 520px;
+    margin: 0 auto 12px;
+    line-height: 1.5;
+  }
+  .keyword-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  .pill {
+    background: rgba(245,197,24,0.1);
+    border: 1px solid rgba(245,197,24,0.3);
+    color: var(--amber);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    padding: 3px 8px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* GAME CONTAINER */
+  .game-container {
+    background: var(--navy);
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 3px solid var(--amber);
+    box-shadow: 0 0 40px rgba(245,197,24,0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ad-banner {
+    background: #05050f;
+    border-bottom: 1px dashed var(--amber);
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 4px;
+  }
+  .ad-banner.bottom { border-bottom: none; border-top: 1px dashed var(--amber); }
+
+  .game-header {
+    background: rgba(0,0,0,0.4);
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(245,197,24,0.15);
+  }
+  .game-logo {
+    font-family: var(--font-head);
+    font-size: 1.6rem;
+    color: var(--amber);
+    letter-spacing: 2px;
+    line-height: 1;
+  }
+  .game-logo span {
+    color: var(--white);
+    font-size: 0.9rem;
+    font-family: var(--font-ui);
+    letter-spacing: 4px;
+    display: block;
+    margin-top: 2px;
+  }
+  .btn-mute {
+    background: transparent;
+    border: 1px solid var(--muted);
+    color: var(--muted);
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .btn-mute:hover { border-color: var(--amber); color: var(--amber); }
+
+  .screen { padding: 24px 20px; display: none; }
+  .screen.active { display: block; }
+
+  .home-hero { text-align: center; margin-bottom: 24px; padding-top: 10px; }
+  .tagline {
+    font-size: 1.15rem;
+    color: var(--white);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+  .road-indicator {
+    background: #111;
+    height: 6px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 16px 0;
+    border-radius: 3px;
+  }
+  .road-indicator::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(90deg, var(--amber) 0 25px, transparent 25px 45px);
+    animation: drive 1s linear infinite;
+  }
+  @keyframes drive {
+    from { background-position: 0 0; }
+    to { background-position: -45px 0; }
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .stat-box {
+    background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(245,197,24,0.2);
+    border-radius: 10px;
+    padding: 8px 14px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--amber);
+    text-align: center;
+  }
+  .stat-box .stat-val {
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: block;
+  }
+  .stat-box .stat-label {
+    font-size: 0.65rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .difficulty-stack { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+  .btn-diff {
+    background: #111124;
+    border: 2px solid #222238;
+    color: var(--white);
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-family: var(--font-ui);
+    font-size: 1.15rem;
+    font-weight: 800;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s;
+  }
+  .btn-diff:hover { transform: translateY(-2px); }
+  .btn-diff.beginner:hover { border-color: var(--green); box-shadow: 0 4px 15px rgba(34,197,94,0.25); }
+  .btn-diff.intermediate:hover { border-color: var(--amber); box-shadow: 0 4px 15px rgba(245,197,24,0.25); }
+  .btn-diff.expert:hover { border-color: var(--red); box-shadow: 0 4px 15px rgba(239,68,68,0.25); }
+  .btn-diff span.tag {
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    background: rgba(255,255,255,0.06);
+    padding: 3px 8px;
+    border-radius: 6px;
+    color: var(--muted);
+  }
+
+  .telemetry-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .telemetry-row strong { color: var(--amber); }
+
+  .timer-container {
+    background: #090915;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+  .timer-bar {
+    background: var(--green);
+    height: 100%;
+    width: 100%;
+    transition: width 0.1s linear, background-color 0.3s;
+  }
+
+  .question-card {
+    background: #090915;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  .options-stack { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+  .btn-opt {
+    background: #121225;
+    border: 2px solid #20203a;
+    color: var(--white);
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s;
+  }
+  .btn-opt:hover:not(:disabled) { background: #181832; border-color: var(--amber); }
+  .btn-opt .letter {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.85rem;
+    background: rgba(0,0,0,0.3);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--amber);
+    flex-shrink: 0;
+  }
+  .btn-opt.correct { background: rgba(34,197,94,0.15)!important; border-color: var(--green)!important; color: var(--green)!important; }
+  .btn-opt.wrong   { background: rgba(239,68,68,0.15)!important; border-color: var(--red)!important; color: var(--red)!important; }
+
+  .explanation-box {
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    border-left: 4px solid var(--amber);
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    display: none;
+  }
+  .explanation-title { font-family: var(--font-mono); font-size: 0.75rem; color: var(--amber); text-transform: uppercase; margin-bottom: 4px; font-weight: 700; }
+  .explanation-text { font-size: 0.85rem; color: var(--muted); line-height: 1.4; }
+
+  .btn-next {
+    background: var(--amber);
+    color: var(--black);
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    font-family: var(--font-head);
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 1px;
+    display: none;
+    transition: all 0.2s;
+  }
+  .btn-next:hover { opacity: 0.9; }
+
+  .results-box { text-align: center; }
+  .star-row { font-size: 2.2rem; color: var(--amber); margin-bottom: 12px; letter-spacing: 4px; }
+  .verdict-title { font-family: var(--font-head); font-size: 2.4rem; letter-spacing: 2px; margin-bottom: 4px; }
+  .verdict-title.passed { color: var(--green); }
+  .verdict-title.failed { color: var(--red); }
+  .score-percent { font-family: var(--font-mono); font-size: 1.2rem; color: var(--white); margin-bottom: 16px; }
+  .feedback-paragraph { font-size: 0.95rem; color: var(--muted); margin-bottom: 24px; line-height: 1.5; }
+
+  .results-stack { display: flex; flex-direction: column; gap: 10px; }
+  .btn-action {
+    background: #111124;
+    border: 2px solid #20203a;
+    color: var(--white);
+    padding: 12px;
+    border-radius: 10px;
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-action:hover { border-color: var(--amber); }
+  .btn-action.primary { background: var(--amber); color: var(--black); border: none; }
+
+  .review-panel { margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px; text-align: left; display: none; }
+  .review-title { font-family: var(--font-mono); font-size: 0.85rem; color: var(--amber); margin-bottom: 12px; text-transform: uppercase; }
+  .review-item { background: rgba(0,0,0,0.3); border-radius: 8px; padding: 12px; margin-bottom: 10px; border: 1px solid rgba(255,255,255,0.04); }
+  .review-q { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
+  .review-ans { font-size: 0.8rem; color: var(--red); margin-bottom: 4px; }
+  .review-ans.correct-label { color: var(--green); }
+
+  .payhip-cta {
+    background: linear-gradient(135deg, #11112d, #1c1106);
+    border: 1px solid var(--amber);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .payhip-cta h4 { color: var(--amber); font-size: 1.1rem; margin-bottom: 4px; }
+  .payhip-cta p { font-size: 0.8rem; color: var(--muted); margin-bottom: 12px; }
+  .payhip-link {
+    display: inline-block;
+    background: var(--green);
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  /* SEO ARTICLE FOOTER — Google indexes this text */
+  .seo-footer {
+    max-width: 680px;
+    margin: 32px auto 0;
+    padding: 0 16px;
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.7;
+  }
+  .seo-footer h2 {
+    font-family: var(--font-head);
+    color: var(--amber);
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin: 20px 0 8px;
+  }
+  .seo-footer p { margin-bottom: 10px; }
+  .seo-footer ul { padding-left: 20px; margin-bottom: 10px; }
+  .seo-footer ul li { margin-bottom: 4px; }
+  .seo-share {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .share-wa  { background: #25D366; color: white; }
+  .share-tw  { background: #1DA1F2; color: white; }
+  .share-fb  { background: #1877F2; color: white; }
+  .share-tg  { background: #2AABEE; color: white; }
+
+</style>
+
+<style>
+/* ===== SIGN-IN GATE ===== */
+#mtbGate{position:fixed; inset:0; z-index:9999; background:linear-gradient(160deg,#0D0D0D,#1A1A1A 60%,#0D0D0D); display:flex; align-items:center; justify-content:center; padding:18px;}
+#mtbGate.hidden{display:none;}
+.gate-card{background:#15151c; border:2px solid #F5C518; border-radius:16px; padding:26px 22px; max-width:380px; width:100%; box-shadow:0 0 50px rgba(245,197,24,.18);}
+.gate-card h1{font-family:Impact,'Arial Black',sans-serif; color:#F5C518; font-size:1.5rem; text-align:center; letter-spacing:1px; margin-bottom:4px;}
+.gate-card p.gate-sub{font-size:.78rem; color:#9a9aa8; text-align:center; margin-bottom:18px; line-height:1.4;}
+.gate-card label{font-size:.72rem; color:#F5C518; text-transform:uppercase; letter-spacing:1px; display:block; margin:10px 0 4px;}
+.gate-card input{width:100%; padding:11px 12px; border-radius:8px; border:2px solid #2b2b38; background:#0c0c12; color:#fff; font-size:.92rem;}
+.gate-card input:focus{outline:none; border-color:#F5C518;}
+.gate-btn{width:100%; margin-top:16px; background:#F5C518; color:#0D0D0D; border:none; padding:13px; border-radius:10px; font-weight:800; font-size:1rem; cursor:pointer; letter-spacing:.5px;}
+.gate-btn:active{transform:scale(.98);}
+.gate-note{font-size:.65rem; color:#666; text-align:center; margin-top:12px; line-height:1.4;}
+.gate-err{color:#EF4444; font-size:.72rem; text-align:center; margin-top:8px; display:none;}
+#appWrap.locked{display:none;}
+.app-topbar{display:flex; justify-content:flex-end; padding:6px 10px 0;}
+.logout-btn{background:transparent; border:1px solid #555; color:#9a9aa8; font-size:.68rem; padding:4px 10px; border-radius:6px; cursor:pointer;}
+</style>
+</head>
+<body>
+
+<!-- ================= SIGN-IN GATE ================= -->
+<div id="mtbGate">
+  <div class="gate-card">
+    <h1>🚗 MTB KENYA</h1>
+    <p class="gate-sub">Sign in to track your scores &amp; high scores across the Simulator, Quiz, Signs Trainer and Mock Exam.</p>
+    <form id="gateForm">
+      <label for="gateName">Full Name</label>
+      <input id="gateName" type="text" placeholder="e.g. Frank Otieno" required maxlength="40">
+      <label for="gatePhone">Phone Number</label>
+      <input id="gatePhone" type="tel" placeholder="07XXXXXXXX" required pattern="[0-9+ ]{7,15}">
+      <button type="submit" class="gate-btn">▶ START LEARNING — FREE</button>
+      <div class="gate-err" id="gateErr">Please enter a valid name and phone number.</div>
+    </form>
+    <p class="gate-note">🔒 Stored only on this device (browser local storage). No data is sent to any server — this gate personalizes your session and is not a substitute for account-level security.</p>
+  </div>
+</div>
+
+<div id="appWrap" class="locked">
+<div class="app-topbar"><span id="welcomeUser" style="font-size:.72rem;color:#9a9aa8;"></span>&nbsp;<button class="logout-btn" onclick="mtbLogout()">Sign out</button></div>
+
+<header>
+  <h1>MTB Kenya — Town Board</h1>
+  <p>Online Driving School Simulator · Theory + Practical, Basic to Master</p>
+</header>
+
+<nav>
+  <button class="active" data-tab="quiz">📘 NTSA Quiz</button>
+  <button data-tab="sim">🚗 Town Board Sim</button>
+  <button data-tab="signs">🚸 Signs</button>
+  <button data-tab="scenario">🛣️ Scenarios</button>
+  <button data-tab="exam">📝 Mock Exam</button>
+</nav>
+
+<main>
+
+<section id="quiz">
+<div class="mtb-page-wrapper">
+
+  <!-- ══ SEO ARTICLE HEADER (Indexed by Google) ══ -->
+  <header class="seo-header">
+    <h1>MTB Kenya — NTSA Driving Theory Quiz</h1>
+    <p class="subtitle">Kenya's free NTSA driving theory practice test. 45 real exam questions — Road Signs, Traffic Rules, Boda-Boda Laws. Pass your test first time!</p>
+    <div class="keyword-pills">
+      <span class="pill">NTSA Exam 2025</span>
+      <span class="pill">Kenya Driving Test</span>
+      <span class="pill">Boda Boda Rules</span>
+      <span class="pill">Road Signs Kenya</span>
+      <span class="pill">Highway Code</span>
+      <span class="pill">MTB Driving Test</span>
+    </div>
+  </header>
+
+  <!-- ══ THE GAME ══ -->
+  <div class="game-container">
+
+    <!-- TOP AD SLOT -->
+    <div class="ad-banner" id="ad-banner-top">
+      <!-- PASTE YOUR GOOGLE ADSENSE CODE HERE -->
+      <span>🌟 ADVERTISEMENT 🌟</span>
+      <span style="font-size:7px;color:#444">AdSense unit — paste script tag here</span>
+    </div>
+
+    <header class="game-header">
+      <div class="game-logo">
+        MTB KENYA
+        <span>NTSA THEORY MASTER</span>
+      </div>
+      <button class="btn-mute" id="mute-toggle" onclick="toggleMute()">🔊</button>
+    </header>
+
+    <!-- HOME SCREEN -->
+    <div class="screen active" id="screen-home">
+      <div class="home-hero">
+        <div class="tagline">Pass Your NTSA Driving Test First Try!</div>
+        <div class="road-indicator"></div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-box">
+          <span class="stat-val">45</span>
+          <span class="stat-label">Questions</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-val">3</span>
+          <span class="stat-label">Levels</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-val" id="high-score">0</span>
+          <span class="stat-label">🏆 Best</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-val">FREE</span>
+          <span class="stat-label">Forever</span>
+        </div>
+      </div>
+
+      <div class="difficulty-stack">
+        <button class="btn-diff beginner" onclick="startGame('beginner')">
+          <span>🟢 BEGINNER</span>
+          <span class="tag">Road Signs · 30s</span>
+        </button>
+        <button class="btn-diff intermediate" onclick="startGame('intermediate')">
+          <span>🟡 INTERMEDIATE</span>
+          <span class="tag">Traffic Rules · 25s</span>
+        </button>
+        <button class="btn-diff expert" onclick="startGame('expert')">
+          <span>🔴 EXPERT</span>
+          <span class="tag">Hazard / Boda-Boda · 20s</span>
+        </button>
+      </div>
+
+      <div class="payhip-cta">
+        <h4>🚨 Complete MTB Prep Bundle</h4>
+        <p>Instant download — 500+ NTSA simulated exam questions + visual flashcards pack.</p>
+        <a href="https://payhip.com/PLACEHOLDER" target="_blank" rel="noopener" class="payhip-link">Get Prep Pack (KES 149)</a>
+      </div>
+    </div>
+
+    <!-- QUIZ SCREEN -->
+    <div class="screen" id="screen-quiz">
+      <div class="telemetry-row">
+        <span>QUESTION: <strong id="question-index">0 of 15</strong></span>
+        <span>SCORE: <strong id="current-score">0</strong></span>
+      </div>
+      <div class="timer-container">
+        <div class="timer-bar" id="timer-progress"></div>
+      </div>
+      <div class="question-card" id="question-text">Loading NTSA Highway regulation query...</div>
+      <div class="options-stack" id="options-container"></div>
+      <div class="explanation-box" id="explanation-box">
+        <div class="explanation-title">Rule Explanation</div>
+        <div class="explanation-text" id="explanation-text">...</div>
+      </div>
+      <button class="btn-next" id="btn-next" onclick="nextQuestion()">NEXT QUESTION →</button>
+    </div>
+
+    <!-- RESULTS SCREEN -->
+    <div class="screen" id="screen-results">
+      <div class="results-box">
+        <div class="star-row" id="star-row">⭐⭐⭐</div>
+        <h3 class="verdict-title" id="verdict-title">PASSED</h3>
+        <div class="score-percent" id="score-percent">Score: 90%</div>
+        <p class="feedback-paragraph" id="feedback-text"></p>
+        <div class="results-stack">
+          <button class="btn-action primary" onclick="retryGame()">🔄 PLAY AGAIN</button>
+          <button class="btn-action" onclick="showReviewPanel()">📋 REVIEW MISSED QUESTIONS</button>
+          <button class="btn-action" onclick="shareScore()">🐦 SHARE ON TWITTER</button>
+          <button class="btn-action" onclick="shareWhatsApp()">💬 SHARE ON WHATSAPP</button>
+          <button class="btn-action" onclick="exitToHome()">← DIFFICULTY SELECTION</button>
+        </div>
+        <div class="review-panel" id="review-panel">
+          <h4 class="review-title">Incorrect Questions Summary</h4>
+          <div id="review-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM AD SLOT -->
+    <div class="ad-banner bottom" id="ad-banner-bottom">
+      <!-- PASTE YOUR GOOGLE ADSENSE CODE HERE -->
+      <span>🌟 ADVERTISEMENT 🌟</span>
+      <span style="font-size:7px;color:#444">AdSense unit — paste script tag here</span>
+    </div>
+
+  </div><!-- end .game-container -->
+
+  <!-- ══ SEO ARTICLE FOOTER (Google crawls this for ranking) ══ -->
+  <article class="seo-footer">
+
+    <h2>About This NTSA Driving Theory Quiz</h2>
+    <p>The MTB Kenya NTSA Driving Theory Quiz is a <strong>free online practice exam</strong> designed to help Kenyan drivers and boda boda riders pass the official NTSA (National Transport and Safety Authority) driving theory test on their first attempt.</p>
+
+    <h2>What Does This Quiz Cover?</h2>
+    <ul>
+      <li>🛑 Kenya Road Signs — Regulatory, Warning, Informatory</li>
+      <li>🚦 Traffic Rules and Traffic Light Laws</li>
+      <li>🏍️ Boda Boda (Motorcycle) Regulations and Helmet Laws</li>
+      <li>⚡ Speed Limits — Urban, Highway, School Zones</li>
+      <li>🍺 Drink Driving BAC Limits (Traffic Act Section 44)</li>
+      <li>🅿️ Parking Rules and Road Markings</li>
+      <li>📋 MTB (Model Town Board) Driving Test Rules</li>
+      <li>🌧️ Hazard Awareness — Aquaplaning, Blind Spots, Following Distance</li>
+    </ul>
+
+    <h2>How to Pass the NTSA Driving Theory Test in Kenya</h2>
+    <p>The NTSA driving theory test requires a minimum pass mark of <strong>75%</strong>. The exam covers the Kenya Highway Code, road signs, traffic rules, and specific regulations for different vehicle classes including motorcycles (boda boda), PSVs, and private vehicles.</p>
+    <p>Practice daily with our 3 difficulty levels — Beginner (Road Signs), Intermediate (Traffic Rules), and Expert (Hazard Awareness & Boda-Boda Laws) — to build confidence and road knowledge.</p>
+
+    <h2>Boda Boda Rules in Kenya — Key Facts</h2>
+    <ul>
+      <li>Both rider AND passenger must wear helmets (mandatory by law)</li>
+      <li>Maximum 1 passenger only on commercial boda boda</li>
+      <li>Reflective jacket/vest mandatory for both rider and passenger</li>
+      <li>Minimum engine capacity for commercial use: 100cc</li>
+      <li>Zero BAC tolerance for commercial motorcycle operators</li>
+    </ul>
+
+    <h2>Share This Free Quiz</h2>
+    <p>Help other Kenyans pass their NTSA test — share this page!</p>
+    <div class="seo-share">
+      <a class="share-btn share-wa" href="https://wa.me/?text=Pass%20your%20NTSA%20Kenya%20driving%20test%20with%20this%20FREE%20quiz!%20https://mtbkenya.blogspot.com/" target="_blank" rel="noopener">📱 WhatsApp</a>
+      <a class="share-btn share-tw" href="https://twitter.com/intent/tweet?text=Free%20NTSA%20Kenya%20driving%20theory%20quiz!%20Pass%20first%20time%20%F0%9F%9A%97%F0%9F%8F%8D%EF%B8%8F&url=https://mtbkenya.blogspot.com/&hashtags=NTSA,Kenya,BodaBoda" target="_blank" rel="noopener">🐦 Twitter / X</a>
+      <a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://mtbkenya.blogspot.com/" target="_blank" rel="noopener">📘 Facebook</a>
+      <a class="share-btn share-tg" href="https://t.me/share/url?url=https://mtbkenya.blogspot.com/&text=Free%20NTSA%20Kenya%20Driving%20Theory%20Quiz!" target="_blank" rel="noopener">✈️ Telegram</a>
+    </div>
+
+    <p style="margin-top:20px;font-size:0.78rem;color:#555;">
+      Tags: NTSA driving test Kenya | Kenya driving theory quiz 2025 | MTB driving test Kenya | boda boda rules Kenya | Kenya road signs | driving licence Kenya | NTSA practice questions | highway code Kenya | pass driving test Kenya | NTSA exam questions
+    </p>
+  </article>
+
+</div><!-- end .mtb-page-wrapper -->
+</section>
+
+<!-- ================= TOWN BOARD SIMULATOR (MAIN FEATURE) ================= -->
+<section id="sim" class="hidden">
+  <div class="simtopbar">
+    <span>Tutor: <b id="tutorName">Mwalimu Achieng</b></span>
+    <span>Mission <b id="missionNum">1</b>/<b id="missionTotal">6</b></span>
+    <span>Score: <b id="simScore">0</b></span>
+  </div>
+  <div id="simWrap">
+    <canvas id="boardCanvas" width="900" height="620"></canvas>
+  </div>
+
+  <div class="tutor-bar">
+    <div class="tutor-avatar">🧑🏿‍🏫</div>
+    <div class="tutor-text" id="tutorText"><b>Mwalimu Achieng:</b> Karibu! This is the MTB town board — exactly like the practice board your driving school uses. Use the arrows to drive. Let's start with lane discipline.</div>
+  </div>
+
+  <div class="mission-progress" id="missionDots"></div>
+
+  <div class="controls" id="touchControls">
+    <button class="ctrl-btn" id="btnUp">▲</button>
+    <button class="ctrl-btn" id="btnLeft">◀</button>
+    <button class="ctrl-btn" id="btnDown">▼</button>
+    <button class="ctrl-btn" id="btnRight">▶</button>
+  </div>
+  <p class="hint">Keyboard: Arrow keys / WASD also work. Steering only responds while moving — exactly like a real car.</p>
+
+  <div class="btnrow">
+    <button class="action alt" onclick="resetMission()">Reset Position</button>
+    <button class="action alt" onclick="restartSim()">Restart All Missions</button>
+  </div>
+</section>
+
+<!-- ================= SIGNS TRAINER ================= -->
+<section id="signs" class="hidden">
+  <h2 class="section-title">Signs Trainer</h2>
+  <div class="card sign-card" id="signCardDisplay"></div>
+  <div class="btnrow">
+    <button class="action alt" onclick="prevSign()">⬅ Prev</button>
+    <button class="action" onclick="revealSign()">Reveal Meaning</button>
+    <button class="action alt" onclick="nextSign()">Next ➜</button>
+  </div>
+  <h2 class="section-title" style="margin-top:16px;">All Signs</h2>
+  <div class="grid" id="signGrid"></div>
+</section>
+
+<!-- ================= SCENARIO SIMULATOR ================= -->
+<section id="scenario" class="hidden">
+  <h2 class="section-title">Scenario Simulator</h2>
+  <div class="card" id="scenarioScene"></div>
+  <div id="scenarioOptions"></div>
+  <div id="scenarioFeedback"></div>
+  <div class="btnrow"><button class="action" onclick="nextScenario()">Next Scenario ➜</button></div>
+</section>
+
+<!-- ================= MOCK EXAM ================= -->
+<section id="exam" class="hidden">
+  <h2 class="section-title">Mock NTSA Exam — 20 Questions</h2>
+  <div id="examIntro">
+    <p style="font-size:.85rem; line-height:1.5;">Timed-style test: 20 random questions. Pass mark 14/20 (70%) — same as the real NTSA theory test.</p>
+    <div class="btnrow"><button class="action" onclick="startExam()">Start Exam</button></div>
+  </div>
+  <div id="examRunning" class="hidden">
+    <div style="font-size:.7rem; opacity:.7;" id="examProgress"></div>
+    <div class="progress-bar"><i id="examProgressBar" style="width:0%"></i></div>
+    <div class="card" id="examQuestionCard"></div>
+    <div id="examOptions"></div>
+  </div>
+  <div id="examResult" class="hidden"></div>
+</section>
+
+</main>
+<footer>MTB Kenya · Town board layout, all graphics original · No copyrighted material reproduced</footer>
+</div><!-- end #appWrap -->
+
+<script>
+/* ============================================================
+   NAV
+=============================================================== */
+document.querySelectorAll('nav button').forEach(b=>{
+  b.onclick=()=>{
+    document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden'));
+    document.getElementById(b.dataset.tab).classList.remove('hidden');
+  };
+});
+
+/* ============================================================
+   TOWN BOARD SIMULATOR
+=============================================================== */
+const cv = document.getElementById('boardCanvas');
+const ctx = cv.getContext('2d');
+const W = cv.width, H = cv.height;
+
+// ---- Town board layout (mirrors real MTB practice board features) ----
+// Horizontal main road (east-west), two lanes each direction
+const roadH = {y0:230, y1:430, laneW:50}; // 4 lanes total, 50px each
+// Vertical road (north-south) crossing it, creates the roundabout
+const roadV = {x0:380, x1:520, laneW:35};
+// Roundabout center
+const RB = {cx:450, cy:330, r:78};
+// Parallel parking bay (south shoulder of horizontal road, east side)
+const parBay = {x:660, y:430, w:160, h:42};
+// Angle parking bays (north shoulder, vertical road branch)
+const angBay = {x:560, y:40, w:180, h:110, stalls:4, angle:55};
+// Yellow box junction (second minor crossroad, south)
+const ybox = {x:380, y:520, w:140, h:60};
+const minorRoad = {y0:500, y1:580}; // minor horizontal road crossing vertical road for yellow box
+
+function drawRoundedRoad(){
+  ctx.fillStyle = '#234d2e';
+  ctx.fillRect(0,0,W,H);
+
+  // horizontal road
+  ctx.fillStyle = '#3a3a3a';
+  ctx.fillRect(0, roadH.y0, W, roadH.y1-roadH.y0);
+  // vertical road
+  ctx.fillRect(roadV.x0, 0, roadV.x1-roadV.x0, H);
+  // minor road (for yellow box)
+  ctx.fillRect(0, minorRoad.y0, W, minorRoad.y1-minorRoad.y0);
+
+  // lane dashes horizontal road
+  ctx.strokeStyle = '#F4F1EA'; ctx.lineWidth=3; ctx.setLineDash([14,14]);
+  ctx.beginPath(); ctx.moveTo(0, roadH.y0+roadH.laneW); ctx.lineTo(W, roadH.y0+roadH.laneW); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(0, roadH.y0+roadH.laneW*3); ctx.lineTo(W, roadH.y0+roadH.laneW*3); ctx.stroke();
+  // center double yellow
+  ctx.setLineDash([]); ctx.strokeStyle = '#FFC72C'; ctx.lineWidth=3;
+  ctx.beginPath(); ctx.moveTo(0, roadH.y0+roadH.laneW*2-2); ctx.lineTo(W, roadH.y0+roadH.laneW*2-2); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(0, roadH.y0+roadH.laneW*2+2); ctx.lineTo(W, roadH.y0+roadH.laneW*2+2); ctx.stroke();
+
+  // vertical lane divider
+  ctx.setLineDash([14,14]); ctx.strokeStyle = '#F4F1EA'; ctx.lineWidth=3;
+  ctx.beginPath(); ctx.moveTo(roadV.x0+roadV.laneW*2, 0); ctx.lineTo(roadV.x0+roadV.laneW*2, H); ctx.stroke();
+  ctx.setLineDash([]);
+
+  // roundabout
+  ctx.fillStyle = '#3a3a3a'; ctx.beginPath(); ctx.arc(RB.cx,RB.cy,RB.r+40,0,7); ctx.fill();
+  ctx.fillStyle = '#234d2e'; ctx.beginPath(); ctx.arc(RB.cx,RB.cy,RB.r,0,7); ctx.fill();
+  ctx.strokeStyle='#FFC72C'; ctx.lineWidth=3; ctx.beginPath(); ctx.arc(RB.cx,RB.cy,RB.r,0,7); ctx.stroke();
+  ctx.fillStyle='#FFC72C'; ctx.font='bold 11px Arial'; ctx.textAlign='center';
+  ctx.fillText('GIVE WAY', RB.cx, RB.cy-RB.r-50);
+
+  // give-way triangles at roundabout entries (simplified marks)
+  ctx.fillStyle='#fff';
+  [[RB.cx-RB.r-40, RB.cy],[RB.cx+RB.r+40, RB.cy],[RB.cx, RB.cy-RB.r-40],[RB.cx, RB.cy+RB.r+40]].forEach(p=>{
+    ctx.beginPath(); ctx.arc(p[0],p[1],3,0,7); ctx.fill();
+  });
+
+  // parallel parking bay
+  ctx.fillStyle='#1A1A1A'; ctx.fillRect(parBay.x,parBay.y,parBay.w,parBay.h);
+  ctx.strokeStyle='#FFC72C'; ctx.setLineDash([6,4]); ctx.lineWidth=2;
+  ctx.strokeRect(parBay.x,parBay.y,parBay.w,parBay.h);
+  ctx.setLineDash([]);
+  ctx.fillStyle='#FFC72C'; ctx.font='bold 10px Arial';
+  ctx.fillText('PARALLEL BAY', parBay.x+parBay.w/2, parBay.y+parBay.h/2+4);
+  // guide cars (parked) bounding the bay
+  drawParkedCar(parBay.x-34, parBay.y+parBay.h/2, 0);
+  drawParkedCar(parBay.x+parBay.w+34, parBay.y+parBay.h/2, 0);
+
+  // angle parking bays
+  ctx.save();
+  ctx.fillStyle='#1A1A1A'; ctx.fillRect(angBay.x, angBay.y, angBay.w, angBay.h);
+  ctx.strokeStyle='#FFC72C'; ctx.lineWidth=2;
+  for(let i=0;i<=angBay.stalls;i++){
+    const sx = angBay.x + (angBay.w/angBay.stalls)*i;
+    ctx.beginPath();
+    ctx.moveTo(sx, angBay.y+angBay.h);
+    ctx.lineTo(sx + 38, angBay.y);
+    ctx.stroke();
+  }
+  ctx.fillStyle='#FFC72C'; ctx.font='bold 10px Arial';
+  ctx.fillText('ANGLE BAYS', angBay.x+angBay.w/2, angBay.y-6);
+  ctx.restore();
+
+  // yellow box junction
+  ctx.save();
+  ctx.strokeStyle='#FFC72C'; ctx.lineWidth=3;
+  ctx.strokeRect(ybox.x, ybox.y, ybox.w, ybox.h);
+  ctx.beginPath();
+  for(let i=-6;i<14;i++){
+    ctx.moveTo(ybox.x + i*16, ybox.y);
+    ctx.lineTo(ybox.x + i*16 + ybox.h, ybox.y+ybox.h);
+  }
+  ctx.clip(); // not strictly needed but keeps it cheap
+  ctx.stroke();
+  ctx.restore();
+  ctx.fillStyle='#FFC72C'; ctx.font='bold 10px Arial';
+  ctx.fillText('YELLOW BOX — do not enter unless exit clear', ybox.x+ybox.w/2, ybox.y-8);
+
+  // STOP sign before yellow box (west approach)
+  drawStopSign(ybox.x-26, minorRoad.y0+ (minorRoad.y1-minorRoad.y0)/2);
+}
+
+function drawParkedCar(x,y,angle){
+  ctx.save(); ctx.translate(x,y); ctx.rotate(angle);
+  ctx.fillStyle='#555'; ctx.fillRect(-16,-9,32,18);
+  ctx.fillStyle='#222'; ctx.fillRect(-12,-7,8,14); ctx.fillRect(4,-7,8,14);
+  ctx.restore();
+}
+function drawStopSign(x,y){
+  ctx.save(); ctx.translate(x,y);
+  ctx.fillStyle='#C8102E';
+  ctx.beginPath();
+  for(let i=0;i<8;i++){
+    const a = Math.PI/8 + i*Math.PI/4;
+    const px = Math.cos(a)*12, py=Math.sin(a)*12;
+    i===0?ctx.moveTo(px,py):ctx.lineTo(px,py);
+  }
+  ctx.closePath(); ctx.fill();
+  ctx.fillStyle='#fff'; ctx.font='bold 6px Arial'; ctx.textAlign='center';
+  ctx.fillText('STOP', 0, 2);
+  ctx.restore();
+}
+
+/* ---- Car model ---- */
+const car = {x:60, y:roadH.y0+roadH.laneW*3+roadH.laneW/2, angle:0, speed:0, steer:0};
+const keys = {};
+function resetCarToStart(){ car.x=60; car.y=roadH.y0+roadH.laneW*3+roadH.laneW/2; car.angle=0; car.speed=0; }
+
+function drawCar(){
+  ctx.save();
+  ctx.translate(car.x, car.y);
+  ctx.rotate(car.angle);
+  ctx.fillStyle = '#FFC72C';
+  ctx.strokeStyle = '#1A1A1A'; ctx.lineWidth=2;
+  ctx.beginPath(); ctx.roundRect ? ctx.roundRect(-18,-10,36,20,5) : ctx.rect(-18,-10,36,20);
+  ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#1A1A1A'; ctx.fillRect(2,-8,12,16); // windshield block
+  ctx.fillStyle='#C8102E'; ctx.fillRect(-19,-9,3,5); ctx.fillRect(-19,4,3,5); // tail lights
+  ctx.restore();
+}
+
+function updateCar(dt){
+  const accel = (keys.up?1:0) - (keys.down?1:0);
+  car.speed += accel*120*dt;
+  car.speed *= 0.96; // friction
+  if(Math.abs(car.speed)<0.5) car.speed = (Math.abs(car.speed)<0.5 && !accel)?0:car.speed;
+  car.speed = Math.max(-90, Math.min(140, car.speed));
+
+  const steerInput = (keys.left?-1:0) + (keys.right?1:0);
+  if(Math.abs(car.speed) > 2){
+    const dir = car.speed>0?1:-1;
+    car.angle += steerInput * 2.0 * dt * dir;
+  }
+  car.x += Math.cos(car.angle)*car.speed*dt;
+  car.y += Math.sin(car.angle)*car.speed*dt;
+  car.x = Math.max(15, Math.min(W-15, car.x));
+  car.y = Math.max(15, Math.min(H-15, car.y));
+}
+
+/* ---- Missions ---- */
+let missionIdx = 0, score = 0, holdTimer = 0;
+const MISSIONS = [
+ {name:'Lane Discipline', tutor:"Mwalimu Achieng: Drive east and stay inside your lane (between the dashed and yellow centre lines) — exactly as examiners check on the MTB board.",
+  check:()=> car.x>700 && car.y>roadH.y0+roadH.laneW*2+4 && car.y<roadH.y0+roadH.laneW*3+roadH.laneW-4,
+  fail:()=> car.x>700 && (car.y<roadH.y0+roadH.laneW*2 || car.y>roadH.y0+roadH.laneW*4)},
+ {name:'Roundabout — 2nd Exit', tutor:"Mwalimu Achieng: Ahead is the roundabout. Approach from the west, give way to the right, and take the 2nd exit (continue straight through, heading east).",
+  check:()=> car.x > RB.cx+RB.r+60 && Math.abs(car.angle)<0.6 && car.y>roadH.y0 && car.y<roadH.y1},
+ {name:'Parallel Park', tutor:"Mwalimu Achieng: Reverse-park between the two parked cars on your left. Align with the bay, straighten up, and stop fully inside.",
+  check:()=> car.x>parBay.x+20 && car.x<parBay.x+parBay.w-20 && car.y>parBay.y+5 && car.y<parBay.y+parBay.h-5 && Math.abs(car.speed)<3 && Math.abs(Math.sin(car.angle))<0.25},
+ {name:'Angle Parking', tutor:"Mwalimu Achieng: Now drive to the angle bays and reverse into one stall at the marked angle, then stop.",
+  check:()=> car.x>angBay.x+10 && car.x<angBay.x+angBay.w-10 && car.y>angBay.y+10 && car.y<angBay.y+angBay.h-10 && Math.abs(car.speed)<3},
+ {name:'Yellow Box Junction', tutor:"Mwalimu Achieng: Approach the yellow box ahead. Stop before the STOP sign and only enter the box once your exit path is clear.",
+  check:()=> car.x>ybox.x+ybox.w+10 && car.y>minorRoad.y0 && car.y<minorRoad.y1,
+  fail:()=> car.x>ybox.x-10 && car.x<ybox.x+ybox.w+10 && car.y>minorRoad.y0 && car.y<minorRoad.y1 && Math.abs(car.speed)<2 && holdTimer<60},
+ {name:'Final Manoeuvre — Return to Start', tutor:"Mwalimu Achieng: Excellent control! Final task: drive back west to your starting lane and park facing forward. Hongera — you are ready for Probationer level!",
+  check:()=> car.x<120 && Math.abs(car.speed)<3 && Math.abs(car.angle)<0.4},
+];
+document.getElementById('missionTotal').textContent = MISSIONS.length;
+
+function renderMissionDots(){
+  document.getElementById('missionDots').innerHTML = MISSIONS.map((m,i)=>
+    `<div class="mission-dot ${i<missionIdx?'done':i===missionIdx?'active':''}" title="${m.name}">${i<missionIdx?'✓':i+1}</div>`).join('');
+}
+function setTutorText(t){ document.getElementById('tutorText').innerHTML = t.replace('Mwalimu Achieng:','<b>Mwalimu Achieng:</b>'); }
+function loadMission(){
+  if(missionIdx>=MISSIONS.length){
+    setTutorText('Mwalimu Achieng: You have completed the full MTB town board course — Lane discipline, Roundabout, Parallel park, Angle park, Yellow box, and final control. Asante! Restart anytime to practice again.');
+    document.getElementById('missionNum').textContent = MISSIONS.length;
+    renderMissionDots();
+    return;
+  }
+  document.getElementById('missionNum').textContent = missionIdx+1;
+  setTutorText(MISSIONS[missionIdx].tutor);
+  renderMissionDots();
+}
+function resetMission(){ resetCarToStart(); }
+function restartSim(){ missionIdx=0; score=0; document.getElementById('simScore').textContent=score; resetCarToStart(); loadMission(); }
+function completeMission(){
+  score += 100;
+  document.getElementById('simScore').textContent = score;
+  missionIdx++;
+  loadMission();
+}
+
+/* ---- Input handling ---- */
+window.addEventListener('keydown', e=>{
+  if(['ArrowUp','w','W'].includes(e.key)) keys.up=true;
+  if(['ArrowDown','s','S'].includes(e.key)) keys.down=true;
+  if(['ArrowLeft','a','A'].includes(e.key)) keys.left=true;
+  if(['ArrowRight','d','D'].includes(e.key)) keys.right=true;
+});
+window.addEventListener('keyup', e=>{
+  if(['ArrowUp','w','W'].includes(e.key)) keys.up=false;
+  if(['ArrowDown','s','S'].includes(e.key)) keys.down=false;
+  if(['ArrowLeft','a','A'].includes(e.key)) keys.left=false;
+  if(['ArrowRight','d','D'].includes(e.key)) keys.right=false;
+});
+function bindHold(id,key){
+  const el = document.getElementById(id);
+  ['mousedown','touchstart'].forEach(ev=>el.addEventListener(ev,e=>{e.preventDefault(); keys[key]=true;}));
+  ['mouseup','touchend','mouseleave','touchcancel'].forEach(ev=>el.addEventListener(ev,e=>{e.preventDefault(); keys[key]=false;}));
+}
+bindHold('btnUp','up'); bindHold('btnDown','down'); bindHold('btnLeft','left'); bindHold('btnRight','right');
+
+/* ---- Game loop ---- */
+let lastT = performance.now();
+function loop(t){
+  const dt = Math.min(0.05,(t-lastT)/1000); lastT=t;
+  updateCar(dt);
+
+  const m = MISSIONS[missionIdx];
+  if(m){
+    if(m.fail && m.fail()){ holdTimer=0; setTutorText('Mwalimu Achieng: ⚠️ Careful — that breaks the rule. ' + m.tutor.replace('Mwalimu Achieng: ','')); }
+    if(Math.abs(car.speed)<2) holdTimer++; else holdTimer=0;
+    if(m.check()) completeMission();
+  }
+
+  drawRoundedRoad();
+  drawCar();
+  requestAnimationFrame(loop);
+}
+loadMission();
+requestAnimationFrame(loop);
+
+/* ============================================================
+   SIGNS TRAINER
+=============================================================== */
+const svgWrap=(i)=>`<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">${i}</svg>`;
+const triangle=(f,s)=>`<polygon points="50,8 92,88 8,88" fill="${f}" stroke="${s}" stroke-width="5"/>`;
+const circleRed=()=>`<circle cx="50" cy="50" r="42" fill="#fff" stroke="#C8102E" stroke-width="8"/>`;
+const circleBlue=()=>`<circle cx="50" cy="50" r="42" fill="#1565C0"/>`;
+const octagon=()=>`<polygon points="35,8 65,8 92,35 92,65 65,92 35,92 8,65 8,35" fill="#C8102E" stroke="#fff" stroke-width="3"/>`;
+const SIGNS=[
+ {cat:'Warning', name:'Roundabout Ahead', svg:svgWrap(triangle('#fff','#C8102E')+`<g transform="translate(50,52)"><path d="M-20,0 A20,20 0 1 1 20,0" fill="none" stroke="#1A1A1A" stroke-width="5"/><path d="M0,-20 A20,20 0 1 1 0,20" fill="none" stroke="#1A1A1A" stroke-width="5"/></g>`), meaning:'Roundabout ahead — slow down and give way to traffic already circulating from your right.'},
+ {cat:'Warning', name:'Pedestrian Crossing', svg:svgWrap(triangle('#fff','#C8102E')+`<g transform="translate(50,55)"><circle cx="0" cy="-18" r="6" fill="#1A1A1A"/><path d="M0,-12 L0,10 M-10,0 L10,0 M0,10 L-8,28 M0,10 L8,28" stroke="#1A1A1A" stroke-width="5" fill="none"/></g>`), meaning:'Pedestrians may cross ahead — reduce speed, especially near schools/markets.'},
+ {cat:'Warning', name:'Bend Ahead', svg:svgWrap(triangle('#fff','#C8102E')+`<path d="M30,75 Q30,40 70,40 Q85,40 85,25" stroke="#1A1A1A" stroke-width="6" fill="none"/>`), meaning:'Sharp bend ahead — slow down before entering, not during.'},
+ {cat:'Warning', name:'Steep Descent', svg:svgWrap(triangle('#fff','#C8102E')+`<path d="M15,75 L55,30 L85,30" stroke="#1A1A1A" stroke-width="6" fill="none"/>`), meaning:'Steep downhill ahead — use lower gear, avoid riding brakes.'},
+ {cat:'Mandatory', name:'Keep Left', svg:svgWrap(circleBlue()+`<circle cx="50" cy="50" r="20" fill="#fff"/><path d="M50,35 L50,65 M50,35 L42,45 M50,35 L58,45" stroke="#1565C0" stroke-width="5" fill="none"/>`), meaning:'Pass on the left of this obstruction/island — mandatory.'},
+ {cat:'Mandatory', name:'Minimum Speed', svg:svgWrap(circleBlue()+`<text x="50" y="58" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">50</text>`), meaning:'Maintain at least this speed (km/h) — typical on fast dual carriageways.'},
+ {cat:'Regulatory', name:'No Entry', svg:svgWrap(circleRed()+`<rect x="20" y="42" width="60" height="16" fill="#1A1A1A"/>`), meaning:'Entry prohibited from this direction — common at one-way exits.'},
+ {cat:'Regulatory', name:'Speed Limit 50', svg:svgWrap(circleRed()+`<text x="50" y="60" font-size="28" fill="#1A1A1A" text-anchor="middle" font-weight="bold">50</text>`), meaning:'Maximum 50 km/h here.'},
+ {cat:'Priority', name:'Give Way', svg:svgWrap(`<polygon points="50,10 92,90 8,90" fill="#fff" stroke="#C8102E" stroke-width="6"/>`), meaning:'Slow down, be ready to stop, give priority to the road you are joining.'},
+ {cat:'Priority', name:'Stop', svg:svgWrap(octagon()+`<text x="50" y="60" font-size="22" fill="#fff" text-anchor="middle" font-weight="bold">STOP</text>`), meaning:'Come to a complete stop, then proceed only when safe.'},
+];
+let signIdx=0, revealed=false;
+function renderSignGrid(){ document.getElementById('signGrid').innerHTML = SIGNS.map((s,i)=>`<div class="mini" onclick="jumpSign(${i})">${s.svg}<div>${s.name}</div></div>`).join(''); }
+function jumpSign(i){ signIdx=i; revealed=false; renderSignCard(); }
+function renderSignCard(){
+  const s=SIGNS[signIdx];
+  document.getElementById('signCardDisplay').innerHTML = `${s.svg}<div class="sign-cat">${s.cat}</div><div class="sign-name">${s.name}</div>${revealed?`<div class="sign-meaning">${s.meaning}</div>`:`<div class="sign-meaning" style="opacity:.5;">Tap Reveal to test yourself.</div>`}`;
+}
+function nextSign(){ signIdx=(signIdx+1)%SIGNS.length; revealed=false; renderSignCard(); }
+function prevSign(){ signIdx=(signIdx-1+SIGNS.length)%SIGNS.length; revealed=false; renderSignCard(); }
+function revealSign(){ revealed=true; renderSignCard(); }
+renderSignGrid(); renderSignCard();
+
+/* ============================================================
+   SCENARIOS
+=============================================================== */
+const SCENARIOS=[
+ {title:'Unmarked Crossroads', desc:'No signs/markings. Another car arrives from your right at the same time.', options:[
+   {text:'Proceed first, you arrived first', correct:false, why:'Order of arrival does not decide priority here.'},
+   {text:'Give way to the vehicle on your right', correct:true, why:'At unmarked crossroads, priority goes to traffic from the right.'},
+   {text:'Flash lights and proceed', correct:false, why:'Flashing is not a legal claim to priority.'}]},
+ {title:'Roundabout Entry', desc:'A vehicle is already circulating, approaching from your right.', options:[
+   {text:'Enter immediately', correct:false, why:'Circulating traffic always has priority.'},
+   {text:'Give way, let it pass first', correct:true, why:'Correct — always yield to traffic already on the roundabout.'},
+   {text:'Stop fully even if clear', correct:false, why:'Not required if the gap is genuinely safe.'}]},
+ {title:'Pedestrian at Zebra Crossing', desc:'A pedestrian is waiting at the edge of a zebra crossing.', options:[
+   {text:'Speed up to pass first', correct:false, why:'Dangerous and illegal.'},
+   {text:'Slow down and stop to let them cross', correct:true, why:'Pedestrians at a zebra crossing have priority.'},
+   {text:'Hoot and continue', correct:false, why:'Hooting does not remove your duty to give way.'}]},
+ {title:'Overtaking on a Bend', desc:'Behind a slow truck approaching a bend, solid centre line.', options:[
+   {text:'Overtake quickly before the bend', correct:false, why:'Illegal and high-risk with limited visibility.'},
+   {text:'Wait for a straight clear section with broken lines', correct:true, why:'Only overtake with full visibility and permitting markings.'},
+   {text:'Tailgate and flash lights', correct:false, why:'Reduces reaction time, doesn\'t create a safe gap.'}]},
+ {title:'Emergency Vehicle Approaching', desc:'An ambulance siren approaches fast on a narrow road.', options:[
+   {text:'Maintain lane and speed', correct:false, why:'Obstructs the emergency vehicle.'},
+   {text:'Brake hard mid-lane', correct:false, why:'Still blocks the path.'},
+   {text:'Pull safely left and slow down', correct:true, why:'Correct — clear a path for emergency vehicles.'}]},
+];
+let scIdx=-1;
+function renderScenario(){
+  const s=SCENARIOS[scIdx];
+  document.getElementById('scenarioScene').innerHTML = `<b>${s.title}</b><p style="margin-top:6px; font-size:.85rem; line-height:1.4;">${s.desc}</p>`;
+  document.getElementById('scenarioOptions').innerHTML = s.options.map((o,i)=>`<button class="option-btn" onclick="answerScenario(${i})">${o.text}</button>`).join('');
+  document.getElementById('scenarioFeedback').innerHTML='';
+}
+function answerScenario(i){
+  const s=SCENARIOS[scIdx];
+  document.querySelectorAll('#scenarioOptions .option-btn').forEach((b,idx)=>{ b.disabled=true; if(s.options[idx].correct) b.classList.add('correct'); else if(idx===i) b.classList.add('wrong'); });
+  const ok=s.options[i].correct;
+  document.getElementById('scenarioFeedback').innerHTML = `<div class="feedback ${ok?'ok':'no'}">${ok?'✅ Correct.':'❌ Not quite.'} ${s.options.find(o=>o.correct).why}</div>`;
+}
+function nextScenario(){ scIdx=(scIdx+1)%SCENARIOS.length; renderScenario(); }
+nextScenario();
+
+/* ============================================================
+   MOCK EXAM
+=============================================================== */
+const BANK=[
+ {q:'What does a solid white centre line mean?', opts:['Overtaking allowed with care','No overtaking permitted','Pedestrian lane','Parking allowed'], a:1},
+ {q:'At an unmarked crossroads, who has right of way?', opts:['Faster vehicle','Vehicle on the right','Vehicle on the left','Whoever hoots first'], a:1},
+ {q:'A red octagonal sign means:', opts:['Give way','Stop completely','Slow down','No parking'], a:1},
+ {q:'When should headlights be dipped?', opts:['Never at night','Meeting oncoming traffic','Only in town','Only on highways'], a:1},
+ {q:'Safe following distance in good conditions:', opts:['1 second','2-3 seconds','Half a second','Fixed 5m'], a:1},
+ {q:'A red-bordered triangle sign generally indicates:', opts:['Mandatory action','Warning of hazard ahead','Prohibition','Information only'], a:1},
+ {q:'Before overtaking you should first:', opts:['Sound horn only','Check mirrors, signal, confirm safe gap','Flash headlights','Speed up suddenly'], a:1},
+ {q:'On a roundabout, you give way to traffic from:', opts:['Left','Right','Behind','None'], a:1},
+ {q:'A broken white centre line means:', opts:['No overtaking ever','Overtaking permitted when safe','Lane closed','Pedestrian zone'], a:1},
+ {q:'At a zebra crossing with a waiting pedestrian, you should:', opts:['Proceed if road surface is empty','Stop and let them cross','Hoot and pass','Speed up'], a:1},
+ {q:'Blue circular signs are generally:', opts:['Warning signs','Mandatory instructions','Prohibition signs','Tourist signs'], a:1},
+ {q:'Minimum legal tyre tread depth:', opts:['0mm','1.6mm','5mm','10mm'], a:1},
+ {q:'Approaching a steep downhill, you should:', opts:['Use lower gear, avoid riding brakes','Coast in neutral','Accelerate to pass quickly','Switch off engine'], a:0},
+ {q:'Purpose of a seatbelt:', opts:['Comfort only','Reduce injury risk in a crash','Insurance paperwork only','Decoration'], a:1},
+ {q:'Approaching an emergency vehicle with siren, you should:', opts:['Maintain lane/speed','Safely give way, pull aside','Speed up to clear area','Stop mid-road'], a:1},
+ {q:'Yellow box junctions mean:', opts:['Park freely inside','Do not enter unless your exit is clear','Stop and wait inside','Buses only'], a:1},
+ {q:'A flashing amber traffic light typically means:', opts:['Stop completely always','Proceed with caution, giving way as needed','Same as red','Pedestrians only'], a:1},
+ {q:'Hazard lights should be used:', opts:['Continuously to warn of a sudden stop in traffic','As daytime running lights','When parking legally','When overtaking'], a:0},
+ {q:'A continuous yellow edge line usually means:', opts:['No stopping/parking','Free parking zone','Night bus lane only','Pedestrian priority'], a:0},
+ {q:'Driving under the influence of alcohol mainly impairs:', opts:['Fuel efficiency','Reaction time and judgment','Tyre grip','Engine performance'], a:1},
+ {q:'Before a journey you should check:', opts:['Only fuel level','Tyres, lights, mirrors, brakes, fuel, fluids','Only radio','Nothing if serviced recently'], a:1},
+ {q:'When reversing, a driver should:', opts:['Rely on mirrors only','Look over the shoulder + mirrors, go slowly','Reverse quickly','Use indicators instead of looking'], a:1},
+];
+let examQs=[], examIdx=0, examAnswers=[];
+function startExam(){
+  examQs=[...BANK].sort(()=>Math.random()-0.5).slice(0,20); examIdx=0; examAnswers=[];
+  document.getElementById('examIntro').classList.add('hidden');
+  document.getElementById('examResult').classList.add('hidden');
+  document.getElementById('examRunning').classList.remove('hidden');
+  renderExamQ();
+}
+function renderExamQ(){
+  const q=examQs[examIdx];
+  document.getElementById('examProgress').textContent=`Question ${examIdx+1} of ${examQs.length}`;
+  document.getElementById('examProgressBar').style.width=`${(examIdx/examQs.length)*100}%`;
+  document.getElementById('examQuestionCard').innerHTML=`<div style="font-size:.9rem; line-height:1.4;">${q.q}</div>`;
+  document.getElementById('examOptions').innerHTML=q.opts.map((o,i)=>`<button class="option-btn" onclick="answerExam(${i})">${o}</button>`).join('');
+}
+function answerExam(i){
+  const q=examQs[examIdx];
+  examAnswers.push(i===q.a);
+  document.querySelectorAll('#examOptions .option-btn').forEach((b,idx)=>{ b.disabled=true; if(idx===q.a) b.classList.add('correct'); else if(idx===i) b.classList.add('wrong'); });
+  setTimeout(()=>{ examIdx++; if(examIdx<examQs.length) renderExamQ(); else finishExam(); },800);
+}
+function finishExam(){
+  document.getElementById('examRunning').classList.add('hidden');
+  const score=examAnswers.filter(Boolean).length;
+  const pass=score>=14;
+  let rows=examQs.map((q,i)=>`<tr><td>${i+1}</td><td>${q.q}</td><td>${examAnswers[i]?'✅':'❌ '+q.opts[q.a]}</td></tr>`).join('');
+  document.getElementById('examResult').classList.remove('hidden');
+  document.getElementById('examResult').innerHTML=`<div class="card"><h2 class="section-title">${pass?'🎉 PASS':'❌ NOT YET'}</h2><div style="font-size:1.3rem; font-weight:bold; color:${pass?'#2E7D32':'#C8102E'};">${score} / 20</div><div class="exam-summary"><table><tr><th>#</th><th>Question</th><th>Result</th></tr>${rows}</table></div><div class="btnrow"><button class="action" onclick="resetExam()">Retry Exam</button></div></div>`;
+}
+function resetExam(){ document.getElementById('examResult').classList.add('hidden'); document.getElementById('examIntro').classList.remove('hidden'); }
+
+</script>
+
+<script>
+/* ============================================================
+   EMBEDDED QUIZ MODULE (NTSA 45-Question Theory Quiz)
+=============================================================== */
+// ══ AUDIO ENGINE ══
+  let isMuted = false, audioCtx = null;
+  function initAudio() { if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); }
+  function playTone(freq, type, dur) {
+    if (isMuted) return;
+    try {
+      initAudio();
+      const o = audioCtx.createOscillator(), g = audioCtx.createGain();
+      o.type = type; o.frequency.setValueAtTime(freq, audioCtx.currentTime);
+      g.gain.setValueAtTime(0.06, audioCtx.currentTime);
+      o.connect(g); g.connect(audioCtx.destination);
+      o.start(); o.stop(audioCtx.currentTime + dur);
+    } catch(e) {}
+  }
+  function toggleMute() { isMuted = !isMuted; document.getElementById('mute-toggle').textContent = isMuted ? '🔇' : '🔊'; }
+  function playCorrect()  { playTone(523.25,"sine",0.1); setTimeout(()=>playTone(659.25,"sine",0.15),100); }
+  function playWrong()    { playTone(180,"sawtooth",0.25); }
+  function playTick()     { playTone(800,"triangle",0.04); }
+  function playFanfare()  { [261.63,329.63,392,523.25].forEach((f,i)=>setTimeout(()=>playTone(f,"sine",0.25),i*100)); }
+
+  // ══ 45 QUESTION DATABASE ══
+  const ALL_QUESTIONS = [
+    // BEGINNER (15)
+    {id:1,difficulty:"beginner",question:"What does a red circular sign in Kenya mean?",options:["A) Informative Guidance","B) Mandatory prohibition (Rules to obey)","C) Temporary caution","D) Priority for oncoming vehicles"],correct:1,explanation:"In Kenya's Highway Code, circular signs with red borders indicate regulatory prohibitions — actions you MUST NOT do."},
+    {id:2,difficulty:"beginner",question:"What is the legal speed limit in urban areas and city streets in Kenya?",options:["A) 80 km/h","B) 50 km/h","C) 110 km/h","D) 30 km/h"],correct:1,explanation:"Unless signs indicate otherwise, the maximum speed limit in urban areas is strictly 50 km/h."},
+    {id:3,difficulty:"beginner",question:"What does an octagonal (8-sided) red sign indicate?",options:["A) Yield / Give way","B) Roundabout ahead","C) Stop completely before proceeding","D) No entry"],correct:2,explanation:"An octagonal red sign is the STOP sign. You must bring the vehicle to a complete halt before the line."},
+    {id:4,difficulty:"beginner",question:"Who has the absolute right of way at pedestrian crossings in Kenya?",options:["A) Large trucks and buses","B) Boda-boda riders","C) Pedestrians","D) Motorcars driving fast"],correct:2,explanation:"Pedestrians have absolute right of way at zebra crossings. Drivers must stop to let them cross safely."},
+    {id:5,difficulty:"beginner",question:"What does a triangular road sign with a red border mean?",options:["A) Regulatory Command","B) Informatory Guide","C) Hazard Warning Ahead","D) Directional signs"],correct:2,explanation:"Triangular signs with red borders warn drivers of upcoming road hazards or conditions."},
+    {id:6,difficulty:"beginner",question:"What is the maximum speed limit in school zones in Kenya?",options:["A) 50 km/h","B) 40 km/h","C) 30 km/h","D) 20 km/h"],correct:2,explanation:"Speed is capped at 30 km/h around schools and playground areas for children's safety."},
+    {id:7,difficulty:"beginner",question:"What color are informative signs directing to tourist destinations or services?",options:["A) Orange background","B) Green background","C) Blue background","D) Red background"],correct:2,explanation:"Blue informational signs provide directions to places of interest, public institutions, or medical services."},
+    {id:8,difficulty:"beginner",question:"What must you do when a traffic light turns solid amber (yellow)?",options:["A) Speed up to beat the red light","B) Stop unless it is unsafe to do so","C) Always drive right through","D) Sound horn and continue"],correct:1,explanation:"Amber means stop before the line unless you are too close to stop safely."},
+    {id:9,difficulty:"beginner",question:"What is the mandatory helmet requirement for boda boda in Kenya?",options:["A) Only the rider must wear a helmet","B) Only the passenger must wear a helmet","C) Both the rider and passenger must wear helmets","D) Helmet is optional if riding slowly"],correct:2,explanation:"The law requires BOTH the rider and the passenger to wear approved protective helmets at all times."},
+    {id:10,difficulty:"beginner",question:"What visual marker indicates you can legally park your vehicle?",options:["A) Yellow continuous line painted on curb","B) Red continuous lines on curb","C) White rectangular marked parking slots","D) Near a zebra crossing"],correct:2,explanation:"White painted slots designate legal parking spaces. Continuous yellow or red lines indicate no-parking areas."},
+    {id:11,difficulty:"beginner",question:"What does a flashing red light at a railway crossing indicate?",options:["A) Proceed slowly","B) Stop completely — train is approaching","C) Cautionary warning only","D) The crossing is broken"],correct:1,explanation:"A flashing red light means you MUST stop immediately. A train is approaching the crossing."},
+    {id:12,difficulty:"beginner",question:"Which of the following is a regulatory mandatory sign?",options:["A) Red circle with speed limit '50'","B) Yellow triangle with bumpy road sign","C) Blue rectangle with hospital sign","D) Brown sign for national parks"],correct:0,explanation:"A red circle enclosing a speed limit value is a regulatory command specifying the maximum allowed speed."},
+    {id:13,difficulty:"beginner",question:"When are you allowed to use a handheld mobile phone while driving in Kenya?",options:["A) When stuck in heavy traffic gridlock","B) Never while driving (unless hands-free)","C) To quickly reply to an SMS text","D) Only when riding a boda boda"],correct:1,explanation:"Using a hand-held mobile device while driving or riding is illegal and heavily penalized in Kenya."},
+    {id:14,difficulty:"beginner",question:"What is the primary meaning of a yellow continuous center line on a two-lane road?",options:["A) Overtaking allowed anytime","B) No overtaking allowed (Do not cross the line)","C) Boda-boda lane only","D) High speed lane indicator"],correct:1,explanation:"A solid continuous center line means you MUST NOT cross or straddle it to overtake vehicles."},
+    {id:15,difficulty:"beginner",question:"What does a red circle with a black diagonal slash over a horn mean?",options:["A) Sound horn to warn pedestrians","B) Hooting/sounding horn is prohibited","C) Music systems are banned","D) Quiet zone for wildlife"],correct:1,explanation:"This regulatory sign prohibits sounding your vehicle's horn — usually near hospitals and schools."},
+    // INTERMEDIATE (15)
+    {id:16,difficulty:"intermediate",question:"When entering a roundabout in Kenya, who has the primary right of way?",options:["A) Vehicles approaching from the left","B) Vehicles already inside the roundabout from the right","C) The biggest vehicle wins","D) Vehicles signaling left"],correct:1,explanation:"Traffic already inside the roundabout from your right has priority. You must yield before entering."},
+    {id:17,difficulty:"intermediate",question:"What is the maximum legal blood alcohol concentration (BAC) for private drivers in Kenya?",options:["A) 0.05% BAC","B) 0.08% BAC (80mg alcohol per 100ml blood)","C) 0.00% BAC (Zero tolerance)","D) 0.15% BAC"],correct:1,explanation:"Under Section 44 of the Traffic Act, the legal BAC limit is 0.08%. Exceeding this is a serious criminal offense."},
+    {id:18,difficulty:"intermediate",question:"When overtaking another vehicle on a normal highway, you must always:",options:["A) Overtake from the left side","B) Overtake from the right side","C) Use whichever side has space","D) Flash headlights and force them off"],correct:1,explanation:"You must always overtake on the right, except when the vehicle ahead is turning right."},
+    {id:19,difficulty:"intermediate",question:"What documents must a Kenyan driver carry and produce on police request?",options:["A) National ID card only","B) Valid driving licence and insurance sticker","C) Vehicle purchase receipt only","D) Logbook and mechanical certificate"],correct:1,explanation:"You must carry and produce a valid driving licence and proof of third-party insurance."},
+    {id:20,difficulty:"intermediate",question:"At an uncontrolled junction (no traffic lights or signs), which vehicle has right of way?",options:["A) The vehicle on the main road","B) Vehicles coming from the right","C) The vehicle driving fastest","D) Vehicles turning left"],correct:1,explanation:"At an uncontrolled junction, always yield to traffic approaching from your right."},
+    {id:21,difficulty:"intermediate",question:"What is the standard penalty for driving without valid third-party insurance in Kenya?",options:["A) A simple verbal warning","B) Vehicle impoundment, fines and potential imprisonment","C) KES 500 minor fine","D) Cancellation of driving licence"],correct:1,explanation:"Driving uninsured is a serious offense leading to vehicle impoundment, heavy fines, and/or imprisonment."},
+    {id:22,difficulty:"intermediate",question:"How far from a corner or junction is parking legally prohibited in Kenya?",options:["A) 5 meters","B) 15 meters","C) 10 meters","D) Parking is allowed anywhere"],correct:1,explanation:"The Traffic Act prohibits parking within 15 meters of any corner, junction, or bus stop."},
+    {id:23,difficulty:"intermediate",question:"What does a yellow box junction with criss-cross lines mean?",options:["A) High-speed lane zone","B) Do not enter the box unless your exit road is clear","C) Parking area for taxis only","D) Overtaking zone"],correct:1,explanation:"You must not enter a box junction unless your exit is completely clear to avoid blocking intersections."},
+    {id:24,difficulty:"intermediate",question:"What is the 'two-second rule' used for in driving safety?",options:["A) Time to shift gears","B) Safe following distance behind the vehicle ahead","C) Time to answer a phone call","D) Time to wait at a stop sign"],correct:1,explanation:"The 2-second rule helps maintain a safe stopping distance from the vehicle in front in dry conditions."},
+    {id:25,difficulty:"intermediate",question:"What is the correct action if your vehicle breaks down on a highway at night?",options:["A) Leave vehicle on tarmac and go home","B) Push off tarmac, turn on hazard lights, place reflective warning triangles","C) Light grass on fire to alert drivers","D) Switch off all lights to save battery"],correct:1,explanation:"Park off tarmac, activate hazard flashers, and place warning triangles at least 50m behind."},
+    {id:26,difficulty:"intermediate",question:"What does a solid yellow curb line mean?",options:["A) Parking allowed for 10 minutes","B) No parking or waiting allowed at any time","C) Boda-boda waiting zone","D) Speed limit boundary"],correct:1,explanation:"Solid yellow curb markings indicate strict 'No Parking / No Waiting' zones at any hour."},
+    {id:27,difficulty:"intermediate",question:"Which is a correct rule of the Model Town Board (MTB) driving test?",options:["A) Always use parking to change directions","B) Use the shortest correct route without hitting obstacles","C) Drive on the pavement if the road is blocked","D) Go counter-clockwise inside roundabouts"],correct:1,explanation:"MTB Rule 1: candidates must navigate to targets using the legally shortest route possible."},
+    {id:28,difficulty:"intermediate",question:"Under NTSA rules, how often must a commercial PSV undergo safety inspection?",options:["A) Every 5 years","B) Annually (every year)","C) Every month","D) Only after an accident"],correct:1,explanation:"Public Service Vehicles (PSVs) must undergo mandatory safety inspection annually."},
+    {id:29,difficulty:"intermediate",question:"What is the legal speed limit on dual-carriageway highways in Kenya?",options:["A) 80 km/h","B) 100 km/h","C) 120 km/h","D) 110 km/h"],correct:1,explanation:"The default legal speed limit for private vehicles on Kenyan highways is 100 km/h."},
+    {id:30,difficulty:"intermediate",question:"What is the meaning of a double solid white center line on a highway?",options:["A) Overtaking zone","B) Strict prohibition on overtaking (Do not cross)","C) High-occupancy vehicle lane","D) Breakdown lane divider"],correct:1,explanation:"Double continuous solid lines strictly forbid crossing or straddling for overtaking."},
+    // EXPERT (15)
+    {id:31,difficulty:"expert",question:"What is the legal passenger limit on a commercial boda boda in Kenya?",options:["A) 2 passengers if sitting tightly","B) Maximum 1 passenger (strictly enforced)","C) Up to 3 passengers with children","D) No limit if helmets worn"],correct:1,explanation:"National transport laws specify boda bodas can carry only ONE passenger at a time."},
+    {id:32,difficulty:"expert",question:"A driver under alcohol influence causing a fatal accident can face:",options:["A) KES 5,000 spot fine","B) Imprisonment of up to 10 years and licence revocation","C) Licence suspension for 1 week","D) Community service order"],correct:1,explanation:"Causing death by drunk driving carries up to 10 years in prison plus a lifetime driving ban."},
+    {id:33,difficulty:"expert",question:"On a multi-lane roundabout on the Model Town Board, which lane is for going straight?",options:["A) Lane 1 (outermost)","B) Lane 2","C) Lane 4 (innermost)","D) All lanes"],correct:1,explanation:"Lane 2 allows straight travel through the roundabout. Outermost is for left turns, innermost for right turns."},
+    {id:34,difficulty:"expert",question:"What is the legal reflective gear requirement for boda boda operators?",options:["A) Optional during daytime","B) Mandatory reflective jacket/vest for both rider and passenger","C) Only the motorcycle must have reflectors","D) Required only on rural roads"],correct:1,explanation:"By law, both the operator and the passenger must wear high-visibility reflective vests."},
+    {id:35,difficulty:"expert",question:"A traffic officer with arm outstretched horizontally towards you means:",options:["A) Proceed quickly","B) Stop completely — traffic from that direction is halted","C) Turn left immediately","D) Overtake ahead"],correct:1,explanation:"An arm extended straight toward you means STOP immediately."},
+    {id:36,difficulty:"expert",question:"What is the 'Rule of the Last Resort' on the Model Town Board exam?",options:["A) Exit through the grass","B) Park only when there is no other route to the target","C) Overtake from the left side","D) Turn around at any continuous yellow line"],correct:1,explanation:"Parking must only be used on the MTB test when all normal road routes are blocked."},
+    {id:37,difficulty:"expert",question:"What is the legal BAC limit for commercial drivers (buses/trucks/PSVs) in Kenya?",options:["A) 0.05% BAC","B) 0.00% BAC (Strict Zero Tolerance)","C) 0.08% BAC","D) 0.02% BAC"],correct:1,explanation:"Commercial/public transport and school bus drivers face a strict zero-tolerance 0.00% BAC limit."},
+    {id:38,difficulty:"expert",question:"When tyres lose contact with a wet road surface, this phenomenon is called:",options:["A) Jackknifing","B) Aquaplaning (Hydroplaning)","C) Brake fading","D) Tyre blow-out"],correct:1,explanation:"Aquaplaning happens when a water layer builds between tyres and road, causing complete loss of traction."},
+    {id:39,difficulty:"expert",question:"Under NTSA Boda-Boda Regulations, the minimum engine capacity for commercial use is:",options:["A) 50cc","B) 100cc","C) 150cc","D) 250cc"],correct:1,explanation:"Commercial boda bodas must have at least 100cc engine displacement for adequate power and safety."},
+    {id:40,difficulty:"expert",question:"When approaching a junction with a flashing yellow traffic light, you should:",options:["A) Speed up before it turns red","B) Stop and wait for green","C) Slow down, proceed with extreme caution, yield to crossing traffic","D) Turn around"],correct:2,explanation:"A flashing yellow signal warns you to slow down and proceed with high alertness."},
+    {id:41,difficulty:"expert",question:"What is the primary danger of driving a vehicle with worn shock absorbers?",options:["A) Engine overheating","B) Increased braking distance and unstable cornering","C) Excessive fuel consumption","D) Headlight failure"],correct:1,explanation:"Defective dampers dramatically increase stopping distances and impair vehicle stability on curves."},
+    {id:42,difficulty:"expert",question:"What does a blue circle with a white arrow pointing straight mean?",options:["A) Straight road only — turning is prohibited","B) One-way street warning","C) Overtaking zone","D) Temporary bypass ahead"],correct:0,explanation:"This regulatory circular sign enforces a mandatory direction — you can only go straight."},
+    {id:43,difficulty:"expert",question:"Under what conditions can you drive with a provisional learner's licence in Kenya?",options:["A) Anytime, anywhere with passenger helmets","B) Only when accompanied by a licensed instructor on an L-plate car","C) Between midnight and 5:00 AM only","D) On rural bypass roads without passengers"],correct:1,explanation:"Learners must display red L plates and be supervised by a certified driving instructor."},
+    {id:44,difficulty:"expert",question:"Minimum distance to place a reflective warning triangle behind a broken-down commercial truck:",options:["A) 10 meters","B) 50 meters","C) 20 meters","D) 100 meters"],correct:1,explanation:"Reflective hazard triangles must be placed at least 50 meters behind to give high-speed traffic ample warning."},
+    {id:45,difficulty:"expert",question:"Under Kenya's NTSA rules, a driver's licence is suspended after collecting how many demerit points?",options:["A) 5 demerits","B) 14 demerits (suspension for up to 6 months)","C) 50 demerits","D) Demerit points do not exist in Kenya"],correct:1,explanation:"Accumulating 14 demerit points triggers automatic licence suspension."}
+  ];
+
+  // ══ GAME STATE ══
+  let currentDifficulty="beginner", sessionQuestions=[], currentQuestionIdx=0;
+  let activeScore=0, highScores={beginner:0,intermediate:0,expert:0};
+  let timerInterval=null, timeLeft=30, maxTime=30, quizStartTime=0;
+  let incorrectAnswersList=[];
+
+  window.addEventListener('load', () => {
+    try { const s=localStorage.getItem('ntsa_mtb_hs'); if(s) highScores=JSON.parse(s); } catch(e){}
+    updateHighScoreDisplay();
+  });
+
+  function updateHighScoreDisplay() {
+    document.getElementById('high-score').textContent = highScores[currentDifficulty]||0;
+  }
+  function saveHighScore() {
+    if (activeScore > (highScores[currentDifficulty]||0)) {
+      highScores[currentDifficulty]=activeScore;
+      try { localStorage.setItem('ntsa_mtb_hs',JSON.stringify(highScores)); } catch(e){}
+      updateHighScoreDisplay();
+    }
+  }
+
+  function showScreen(id) {
+    document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+
+  function startGame(difficulty) {
+    initAudio();
+    currentDifficulty=difficulty;
+    currentQuestionIdx=0; activeScore=0; incorrectAnswersList=[];
+    maxTime = difficulty==="beginner"?30:difficulty==="intermediate"?25:20;
+    sessionQuestions = ALL_QUESTIONS.filter(q=>q.difficulty===difficulty).sort(()=>Math.random()-0.5).slice(0,15);
+    document.getElementById('current-score').textContent=0;
+    showScreen('screen-quiz');
+    loadQuestion();
+  }
+
+  function loadQuestion() {
+    clearInterval(timerInterval);
+    const q=sessionQuestions[currentQuestionIdx];
+    document.getElementById('question-index').textContent=`${currentQuestionIdx+1} of 15`;
+    document.getElementById('question-text').textContent=q.question;
+    const container=document.getElementById('options-container');
+    container.innerHTML='';
+    document.getElementById('explanation-box').style.display='none';
+    document.getElementById('btn-next').style.display='none';
+    q.options.forEach((opt,idx)=>{
+      const btn=document.createElement('button');
+      btn.className='btn-opt';
+      btn.innerHTML=`<span class="letter">${['A','B','C','D'][idx]}</span><span>${opt}</span>`;
+      btn.onclick=()=>selectOption(idx);
+      container.appendChild(btn);
+    });
+    timeLeft=maxTime;
+    updateTimerUI();
+    quizStartTime=Date.now();
+    timerInterval=setInterval(()=>{ timeLeft--; updateTimerUI(); if(timeLeft<=0) handleTimeout(); },1000);
+  }
+
+  function updateTimerUI() {
+    const bar=document.getElementById('timer-progress');
+    bar.style.width=(timeLeft/maxTime*100)+'%';
+    bar.style.backgroundColor = timeLeft<=5?'var(--red)':timeLeft<=10?'var(--amber)':'var(--green)';
+    if(timeLeft<=5) playTick();
+  }
+
+  function selectOption(selectedIdx) {
+    clearInterval(timerInterval);
+    const q=sessionQuestions[currentQuestionIdx];
+    const opts=document.querySelectorAll('.btn-opt');
+    opts.forEach(o=>o.disabled=true);
+    const isCorrect=selectedIdx===q.correct;
+    if(isCorrect) {
+      opts[selectedIdx].classList.add('correct');
+      playCorrect();
+      let pts=10;
+      if((Date.now()-quizStartTime)/1000<=10) pts+=5;
+      activeScore+=pts;
+      document.getElementById('current-score').textContent=activeScore;
+    } else {
+      opts[selectedIdx].classList.add('wrong');
+      opts[q.correct].classList.add('correct');
+      playWrong();
+      incorrectAnswersList.push({q:q.question,yourAns:q.options[selectedIdx],correctAns:q.options[q.correct]});
+    }
+    document.getElementById('explanation-text').textContent=q.explanation;
+    document.getElementById('explanation-box').style.display='block';
+    document.getElementById('btn-next').style.display='block';
+  }
+
+  function handleTimeout() {
+    clearInterval(timerInterval);
+    const q=sessionQuestions[currentQuestionIdx];
+    document.querySelectorAll('.btn-opt').forEach(o=>o.disabled=true);
+    document.querySelectorAll('.btn-opt')[q.correct].classList.add('correct');
+    playWrong();
+    incorrectAnswersList.push({q:q.question,yourAns:"⚠️ Timeout",correctAns:q.options[q.correct]});
+    document.getElementById('explanation-text').textContent="Time expired! "+q.explanation;
+    document.getElementById('explanation-box').style.display='block';
+    document.getElementById('btn-next').style.display='block';
+  }
+
+  function nextQuestion() {
+    currentQuestionIdx++;
+    currentQuestionIdx<sessionQuestions.length ? loadQuestion() : showResults();
+  }
+
+  function showResults() {
+    saveHighScore(); playFanfare();
+    const correct=sessionQuestions.length-incorrectAnswersList.length;
+    const pct=Math.round(correct/sessionQuestions.length*100);
+    const passed=pct>=75;
+    document.getElementById('score-percent').textContent=`SCORE: ${pct}% (${correct}/15 Correct)`;
+    const title=document.getElementById('verdict-title');
+    const fb=document.getElementById('feedback-text');
+    const stars=document.getElementById('star-row');
+    if(passed) {
+      title.className="verdict-title passed"; title.textContent="PASSED";
+      stars.textContent=pct>=90?"⭐⭐⭐":"⭐⭐";
+      fb.textContent=pct>=90?"Outstanding! Fully NTSA compliant. You're ready for exam day.":"Good job! You've hit the 75% NTSA passing standard. You're road ready.";
+    } else {
+      title.className="verdict-title failed"; title.textContent="FAIL";
+      stars.textContent="⭐";
+      fb.textContent="Below the 75% NTSA pass mark. Review missed questions, restudy, and retry!";
+    }
+    showScreen('screen-results');
+  }
+
+  function showReviewPanel() {
+    const list=document.getElementById('review-list');
+    list.innerHTML='';
+    if(!incorrectAnswersList.length) {
+      list.innerHTML='<div class="review-item" style="color:var(--green)">✅ Perfect run! Zero mistakes.</div>';
+    } else {
+      incorrectAnswersList.forEach(item=>{
+        const d=document.createElement('div');
+        d.className='review-item';
+        d.innerHTML=`<div class="review-q">${item.q}</div><div class="review-ans">❌ Your Answer: ${item.yourAns}</div><div class="review-ans correct-label">✅ Correct: ${item.correctAns}</div>`;
+        list.appendChild(d);
+      });
+    }
+    document.getElementById('review-panel').style.display='block';
+  }
+
+  function retryGame() { document.getElementById('review-panel').style.display='none'; startGame(currentDifficulty); }
+  function exitToHome() { document.getElementById('review-panel').style.display='none'; showScreen('screen-home'); }
+
+  function shareScore() {
+    const correct=sessionQuestions.length-incorrectAnswersList.length;
+    const pct=Math.round(correct/sessionQuestions.length*100);
+    const text=encodeURIComponent(`I scored ${pct}% on the MTB Kenya NTSA Driving Quiz! 🚗🏍️ Try it free → https://mtbkenya.blogspot.com/ #NTSA #Kenya #BodaBoda #DrivingTest`);
+    window.open(`https://twitter.com/intent/tweet?text=${text}`,'_blank');
+  }
+
+  function shareWhatsApp() {
+    const correct=sessionQuestions.length-incorrectAnswersList.length;
+    const pct=Math.round(correct/sessionQuestions.length*100);
+    const text=encodeURIComponent(`I scored ${pct}% on the MTB Kenya NTSA Driving Quiz! 🚗🏍️ Try it FREE → https://mtbkenya.blogspot.com/`);
+    window.open(`https://wa.me/?text=${text}`,'_blank');
+  }
+
+</script>
+
+<script>
+/* ============================================================
+   SIGN-IN GATE LOGIC (client-side only, localStorage)
+=============================================================== */
+(function(){
+  const GATE_KEY = 'mtb_user_v1';
+  const gate = document.getElementById('mtbGate');
+  const appWrap = document.getElementById('appWrap');
+  function unlock(user){
+    gate.classList.add('hidden');
+    appWrap.classList.remove('locked');
+    document.getElementById('welcomeUser').textContent = '👋 ' + user.name;
+  }
+  try {
+    const saved = JSON.parse(localStorage.getItem(GATE_KEY) || 'null');
+    if(saved && saved.name) unlock(saved);
+  } catch(e){}
+
+  document.getElementById('gateForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('gateName').value.trim();
+    const phone = document.getElementById('gatePhone').value.trim();
+    const errBox = document.getElementById('gateErr');
+    if(name.length < 2 || phone.replace(/[^0-9]/g,'').length < 7){
+      errBox.style.display = 'block';
+      return;
+    }
+    errBox.style.display = 'none';
+    const user = {name, phone, joined: Date.now()};
+    try { localStorage.setItem(GATE_KEY, JSON.stringify(user)); } catch(err){}
+    unlock(user);
+  });
+
+  window.mtbLogout = function(){
+    try { localStorage.removeItem(GATE_KEY); } catch(e){}
+    location.reload();
+  };
+})();
+</script>
+</body>
+</html>
